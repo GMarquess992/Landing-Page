@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planejamento Financeiro Para Jovens Investidores | Comece Agora</title>
+  <meta name="description" content="Planejamento financeiro personalizado para jovens investidores. Organize seu patrimônio e alinhe seus investimentos com seus objetivos de vida.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #3a86ff;
+      --primary-dark: #2667cc;
+      --accent: #ff006e;
+      --dark: #1a1a2e;
+      --light: #ffffff;
+      --gray: #f8f9fa;
+      --success: #38b000;
+      --slide-width: 100%; /* Nova variável para controlar a largura dos slides */
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--dark);
+      color: var(--light);
+      line-height: 1.6;
+    }
+    
+    .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(26, 26, 46, 0.8) 100%), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070') no-repeat center center/cover;
+      /* Alternativa: https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015 (gráficos financeiros)
+         Alternativa: https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=2070 (workspace moderno)
+         Alternativa: https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070 (equipe trabalhando) */
+    }
+    
+    header {
+      padding: 1.5rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 120px; /* Altura fixa para o cabeçalho para acomodar o logo maior */
+    }
+    
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 190px; /* Aumentado de 45px para 80px */
+      width: auto;
+      filter: brightness(0) invert(1) sepia(100%) saturate(500%) hue-rotate(190deg); /* Aplica um filtro azul similar à cor primária */
+    }
+    
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+      flex: 1;
+      gap: 2rem;
+    }
+    
+    .hero-content {
+      max-width: 600px;
+      animation: fadeIn 1s ease-in;
+    }
+    
+    .hero-title {
+      font-size: 2.75rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+      background: linear-gradient(90deg, var(--light) 0%, var(--primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      color: #e0e0e0;
+    }
+    
+    .benefits {
+      margin: 2rem 0;
+    }
+    
+    .benefit-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .benefit-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background-color: rgba(58, 134, 255, 0.2);
+      border-radius: 50%;
+      margin-right: 12px;
+      color: var(--primary);
+    }
+    
+    .form-container {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      padding: 2.5rem;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      animation: slideIn 1s ease-in;
+    }
+    
+    .form-title {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--light);
+    }
+    
+    .input-group {
+      margin-bottom: 1.25rem;
+    }
+    
+    .input-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      color: #e0e0e0;
+    }
+    
+    .input-group input, .input-group select {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.07);
+      color: var(--light);
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    /* Correção para garantir que o texto no select seja visível */
+    .input-group select option {
+      background-color: var(--dark);
+      color: var(--light);
+    }
+    
+    .input-group input:focus, .input-group select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(58, 134, 255, 0.3);
+    }
+    
+    .cta-button {
+      width: 100%;
+      padding: 14px;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    
+    .cta-button:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(58, 134, 255, 0.4);
+    }
+    
+    .privacy-text {
+      text-align: center;
+      font-size: 0.8rem;
+      margin-top: 1rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    
+    /* Estilo atualizado para carrossel de depoimentos */
+    .testimonials-container {
+      position: relative;
+      margin-top: 2rem;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 12px; /* Arredonda as bordas do container */
+    }
+    
+    .testimonials {
+      display: flex;
+      transition: transform 0.5s ease;
+      width: 100%;
+    }
+    
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      flex-direction: column;
+      width: var(--slide-width); /* Usa a variável para definir a largura */
+      min-width: var(--slide-width); /* Garante que a largura mínima seja respeitada */
+      flex-shrink: 0;
+      box-sizing: border-box; /* Garante que o padding não afete o tamanho total */
+      height: 220px; /* Altura fixa para todos os cards */
+      overflow: hidden; /* Esconde conteúdo que exceda o tamanho do card */
+    }
+    
+    .testimonial-content {
+      margin-bottom: 1rem;
+      color: #e0e0e0;
+      font-style: italic;
+      display: -webkit-box;
+      -webkit-line-clamp: 3; /* Limita o texto a 3 linhas */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis; /* Adiciona reticências se o texto for muito longo */
+      height: 4.8em; /* Altura fixa para o conteúdo do depoimento */
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+    
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+      object-fit: cover;
+    }
+    
+    .author-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    
+    .author-title {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    
+    /* Controles do carrossel */
+    .testimonial-controls {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+      gap: 1rem;
+    }
+    
+    .testimonial-arrow {
+      background-color: rgba(58, 134, 255, 0.2);
+      color: var(--primary);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+    }
+    
+    .testimonial-arrow:hover {
+      background-color: rgba(58, 134, 255, 0.4);
+      transform: scale(1.1);
+    }
+    
+    .testimonial-arrow svg {
+      width: 20px;
+      height: 20px;
+    }
+    
+    .testimonial-dots {
+      display: flex;
+      gap: 8px;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+    
+    .testimonial-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .testimonial-dot.active {
+      background-color: var(--primary);
+      transform: scale(1.2);
+    }
+    
+    .advisor-profile {
+      display: flex;
+      align-items: center;
+      margin-top: 2rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      padding: 1.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .advisor-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary);
+      margin-right: 1.5rem;
+    }
+    
+    .advisor-info h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .advisor-info p {
+      font-size: 0.9rem;
+      color: #e0e0e0;
+    }
+    
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin: 3rem 0;
+    }
+    
+    .stat-item {
+      text-align: center;
+    }
+    
+    .stat-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    
+    .stat-label {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    
+    @media (max-width: 992px) {
+      .hero {
+        flex-direction: column;
+        padding: 2rem 5%;
+      }
+      
+      .hero-content {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      
+      .hero-title {
+        font-size: 2.25rem;
+      }
+      
+      .benefit-item {
+        justify-content: center;
+      }
+      
+      .form-container {
+        max-width: 100%;
+      }
+      
+      .advisor-profile {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .advisor-photo {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .stats {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="GMS Consultoria Logo">
+      </div>
+    </header>
+    
+    <main class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Planejamento financeiro para a nova geração de investidores</h1>
+        <p class="hero-subtitle">Transforme seu dinheiro em liberdade financeira com um plano personalizado para seus objetivos de vida.</p>
+        
+        <div class="benefits">
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <span>Organize seu patrimônio de forma inteligente</span>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <span>Alinhe seus investimentos com seus objetivos reais</span>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <span>Maximize retornos com estratégias personalizadas</span>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <span>Construa riqueza consistente a longo prazo</span>
+          </div>
+        </div>
+        
+        <div class="advisor-profile">
+          <img src="foto.jpg" alt="Consultor Financeiro" class="advisor-photo">
+          <div class="advisor-info">
+            <h3>Gabriel Marques</h3>
+            <p>Especialista em planejamento financeiro para jovens investidores, com foco em estratégias personalizadas para alcançar objetivos de vida.</p>
+          </div>
+        </div>
+        
+        <!-- Carrossel de depoimentos -->
+        <div class="testimonials-container">
+          <div class="testimonials" id="testimonials-slider">
+            <div class="testimonial-card">
+              <p class="testimonial-content">"Em apenas 3 meses, consegui organizar minhas finanças e dar o primeiro passo para realizar meu sonho de comprar um apartamento."</p>
+              <div class="testimonial-author">
+                <img src="Yurifoto.jpg" alt="Yuri Braga" class="author-avatar">
+                <div>
+                  <div class="author-name">Yuri Braga</div>
+                  <div class="author-title">Empresário, 29 anos</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial-card">
+              <p class="testimonial-content">"Finalmente entendi como balancear meus investimentos e agora consigo dormir tranquilo sabendo que meu dinheiro está trabalhando para mim."</p>
+              <div class="testimonial-author">
+                <img src="Atilafoto.png" alt="Atila Patrick" class="author-avatar">
+                <div>
+                  <div class="author-name">Atila Patrick</div>
+                  <div class="author-title">Contador, 28 anos</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial-card">
+              <p class="testimonial-content">"O planejamento mudou completamente minha relação com o dinheiro. Agora tenho uma estratégia clara e estou vendo resultados reais mês após mês."</p>
+              <div class="testimonial-author">
+                <img src="Pedrofoto.png" alt="Pedro Heimann" class="author-avatar">
+                <div>
+                  <div class="author-name">Pedro Heimann</div>
+                  <div class="author-title">Piloto de Avião, 26 anos</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial-card">
+              <p class="testimonial-content">"Depois de trabalhar com o Gabriel, consegui reduzir minhas dívidas em 70% e comecei a investir mensalmente pela primeira vez na vida."</p>
+              <div class="testimonial-author">
+                <img src="Joãofoto.png" alt="João Victor" class="author-avatar">
+                <div>
+                  <div class="author-name">João Victor</div>
+                  <div class="author-title">Desenvolvedor, 26 anos</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial-card">
+              <p class="testimonial-content">"Meu sonho era ter tranquilidade financeira antes dos 35 anos, e com a ajuda do Gabriel estou no caminho certo. Recomendo para todos os meus amigos."</p>
+              <div class="testimonial-author">
+                <img src="Ermelindafoto.png" alt="Ermelinda Garcia" class="author-avatar">
+                <div>
+                  <div class="author-name">Ermelinda Garcia</div>
+                  <div class="author-title">Aposentada, 84 anos</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-controls">
+            <button class="testimonial-arrow prev-testimonial" aria-label="Depoimento anterior">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5"></path>
+                <path d="M12 19l-7-7 7-7"></path>
+              </svg>
+            </button>
+            <button class="testimonial-arrow next-testimonial" aria-label="Próximo depoimento">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+          
+          <div class="testimonial-dots" id="testimonial-dots">
+            <!-- Dots serão gerados via JavaScript -->
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-container">
+        <h2 class="form-title">Transforme suas finanças hoje</h2>
+        <form id="consultaForm" action="https://formspree.io/f/xanekrqr" method="POST">
+          <div class="input-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+          </div>
+          
+          <div class="input-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+          </div>
+          
+          <div class="input-group">
+            <label for="telefone">WhatsApp</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+          </div>
+          
+          <div class="input-group">
+            <label for="objetivo">Principal objetivo financeiro</label>
+            <select id="objetivo" name="objetivo" required>
+              <option value="" disabled selected>Selecione um objetivo</option>
+              <option value="independencia">Independência financeira</option>
+              <option value="imovel">Comprar imóvel</option>
+              <option value="aposentadoria">Aposentadoria</option>
+              <option value="educacao">Educação</option>
+              <option value="viagem">Viagem internacional</option>
+              <option value="outro">Outro objetivo</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="cta-button">
+            Agendar conversa gratuita
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+          
+          <p class="privacy-text">Seus dados estão seguros. Não fazemos spam.</p>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Código do carrossel permanece igual...
+    document.addEventListener('DOMContentLoaded', function() {
+      const slider = document.getElementById('testimonials-slider');
+      const slides = slider.querySelectorAll('.testimonial-card');
+      const prevBtn = document.querySelector('.prev-testimonial');
+      const nextBtn = document.querySelector('.next-testimonial');
+      const dotsContainer = document.getElementById('testimonial-dots');
+      
+      let currentIndex = 0;
+      let slideWidth = 100; // Largura do slide em porcentagem
+      let isAnimating = false; // Flag para controlar a animação
+      
+      // Ajuste do tamanho dos depoimentos para garantir que caibam corretamente
+      function adjustTestimonialSize() {
+        // Atualiza a variável CSS para o tamanho atual da tela
+        document.documentElement.style.setProperty('--slide-width', slideWidth + '%');
+        
+        // Posiciona o slider na posição atual
+        slider.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+      }
+      
+      // Inicializa o tamanho dos depoimentos
+      adjustTestimonialSize();
+      
+      // Atualiza o tamanho quando a janela é redimensionada
+      window.addEventListener('resize', adjustTestimonialSize);
+      
+      // Criar os pontos indicadores
+      slides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('testimonial-dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+          if (!isAnimating) goToSlide(index);
+        });
+        dotsContainer.appendChild(dot);
+      });
+      
+      const dots = dotsContainer.querySelectorAll('.testimonial-dot');
+      
+      // Função aprimorada para ir para um slide específico
+      function goToSlide(index) {
+        if (isAnimating) return; // Impede cliques durante a animação
+        
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+        
+        // Marca como em animação
+        isAnimating = true;
+        
+        currentIndex = index;
+        
+        // Transição suave para o slide selecionado
+        slider.style.transition = 'transform 0.5s ease';
+        slider.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+        
+        // Atualizar pontos ativos
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentIndex);
+        });
+        
+        // Após a animação terminar, permite novos cliques
+        setTimeout(() => {
+          isAnimating = false;
+        }, 500); // Tempo igual à duração da transição
+      }
+      
+      // Event listeners para os botões de navegação com debounce para evitar cliques rápidos
+      prevBtn.addEventListener('click', () => {
+        if (!isAnimating) goToSlide(currentIndex - 1);
+      });
+      
+      nextBtn.addEventListener('click', () => {
+        if (!isAnimating) goToSlide(currentIndex + 1);
+      });
+      
+      // Inicializar o primeiro slide
+      goToSlide(0);
+      
+      // Navegação por teclado (opcional)
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+          if (!isAnimating) goToSlide(currentIndex - 1);
+        } else if (e.key === 'ArrowRight') {
+          if (!isAnimating) goToSlide(currentIndex + 1);
+        }
+      });
+      
+      // Auto-play do carrossel
+      let autoplayInterval;
+      
+      function startAutoplay() {
+        autoplayInterval = setInterval(() => {
+          if (!isAnimating) goToSlide(currentIndex + 1);
+        }, 5000); // Muda de slide a cada 5 segundos
+      }
+      
+      function stopAutoplay() {
+        clearInterval(autoplayInterval);
+      }
+      
+      // Iniciar autoplay
+      startAutoplay();
+      
+      // Parar autoplay quando o usuário interagir com o carrossel
+      slider.addEventListener('mouseenter', stopAutoplay);
+      prevBtn.addEventListener('mouseenter', stopAutoplay);
+      nextBtn.addEventListener('mouseenter', stopAutoplay);
+      dotsContainer.addEventListener('mouseenter', stopAutoplay);
+      
+      // Reiniciar autoplay quando o usuário parar de interagir
+      slider.addEventListener('mouseleave', startAutoplay);
+      prevBtn.addEventListener('mouseleave', startAutoplay);
+      nextBtn.addEventListener('mouseleave', startAutoplay);
+      dotsContainer.addEventListener('mouseleave', startAutoplay);
+      
+      // Para dispositivos touch
+      slider.addEventListener('touchstart', stopAutoplay);
+      slider.addEventListener('touchend', startAutoplay);
+    });
+    
+    // Remover o alert do formulário, pois agora o Formspree lidará com isso
+    // Apenas adicionando validação do formulário para melhorar a experiência do usuário
+    document.getElementById('consultaForm').addEventListener('submit', function(e) {
+      // O Formspree vai lidar com o envio do formulário
+      // Esta função permanece para qualquer validação adicional necessária
+      
+      // Formatar o número de telefone antes do envio (opcional)
+      const telefoneInput = document.getElementById('telefone');
+      if (telefoneInput.value) {
+        // Aqui você pode adicionar lógica para formatar o telefone se desejar
+      }
+    });
+  </script>
+</body>
+</html>
