@@ -1,837 +1,1936 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Planejamento Financeiro Para Jovens Investidores | GMS Consultoria</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <meta name="description" content="Planejamento financeiro personalizado para jovens investidores. Organize seu patrimônio e alinhe seus investimentos com seus objetivos de vida.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #3a86ff;
-      --primary-dark: #2667cc;
-      --accent: #25D366;
-      --dark: #1a1a2e;
-      --light: #ffffff;
-      --light-blue: #a9c7ff;
-      --card-bg: rgba(255, 255, 255, 0.05);
-      --card-border: rgba(255, 255, 255, 0.1);
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejamento Financeiro Para Investidores | GMS Consultoria</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="description" content="Planejamento financeiro personalizado para investidores. Organize seu patrimônio e alinhe seus investimentos com seus objetivos de vida.">
     
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <!-- Fontes modernas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--dark);
-      color: var(--light);
-      line-height: 1.6;
-    }
-    
-    .container {
-      max-width: 1300px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    .page-wrapper {
-      min-height: 100vh;
-      background: linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(26, 26, 46, 0.8) 100%), 
-                  url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070') 
-                  no-repeat center center/cover;
-    }
-    
-    /* Header */
-    header {
-      padding: 20px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .logo {
-      height: 80px;
-    }
-
-    .site-logo {
-  display: block;
-  height: 60px;
-  width: auto;
-  object-fit: contain;
-}
-    
-    /* Seção Hero */
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      padding: 10px 0;
-      align-items: center;
-    }
-    
-    .hero-content h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
-    
-    .hero-content h1 span {
-      background: linear-gradient(90deg, var(--light), var(--light-blue), var(--primary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    
-    .hero-subtitle {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      max-width: 80%;
-    }
-    
-    /* Benefícios */
-    .benefits {
-      margin: 30px 0;
-    }
-    
-    .benefit-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-    
-    .benefit-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 24px;
-      height: 24px;
-      background-color: rgba(58, 134, 255, 0.2);
-      border-radius: 50%;
-      margin-right: 12px;
-      color: var(--primary);
-    }
-    
-    /* Formulário */
-    .form-container {
-      background: var(--card-bg);
-      backdrop-filter: blur(10px);
-      padding: 40px;
-      border-radius: 16px;
-      border: 1px solid var(--card-border);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    }
-    
-    .form-title {
-      font-size: 1.8rem;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    
-    .input-group {
-      margin-bottom: 20px;
-    }
-    
-    .input-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 0.9rem;
-    }
-    
-    .input-group input {
-      width: 100%;
-      padding: 15px;
-      border-radius: 8px;
-      border: 1px solid var(--card-border);
-      background: rgba(255, 255, 255, 0.07);
-      color: var(--light);
-      font-size: 1rem;
-    }
-    
-    .input-group input:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 2px rgba(58, 134, 255, 0.3);
-    }
-    
-    .cta-button {
-      width: 100%;
-      padding: 16px;
-      background-color: var(--primary);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: all 0.3s ease;
-    }
-    
-    .cta-button:hover {
-      background-color: var(--primary-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(58, 134, 255, 0.4);
-    }
-    
-    .privacy-text {
-      text-align: center;
-      font-size: 0.8rem;
-      margin-top: 15px;
-      color: rgba(255, 255, 255, 0.6);
-    }
-    
-    /* Estatísticas */
-    .stats-section {
-      padding: 40px 0;
-    }
-    
-    .stats {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-    }
-    
-    .stat-item {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 40px;
-      text-align: center;
-      flex: 1;
-      transition: transform 0.3s ease;
-    }
-    
-    .stat-item:hover {
-      transform: translateY(-10px);
-    }
-    
-    .stat-value {
-      font-size: 4rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 10px;
-    }
-    
-    .stat-label {
-      font-size: 1.1rem;
-      color: var(--light);
-    }
-    
-    /* Como Funciona */
-    .how-it-works {
-      padding: 60px 0;
-    }
-    
-    .section-title {
-      font-size: 2.5rem;
-      color: var(--primary);
-      margin-bottom: 40px;
-      text-align: center;
-    }
-    
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-    
-    .step {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 30px;
-      text-align: center;
-      transition: all 0.3s ease;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .step:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      border-color: var(--primary);
-    }
-    
-    .step-number {
-      width: 50px;
-      height: 50px;
-      background: var(--primary);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-    
-    .step-title {
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin-bottom: 15px;
-    }
-    
-    .step-desc {
-      font-size: 0.95rem;
-      color: rgba(255, 255, 255, 0.8);
-    }
-    
-    /* Perfil */
-    .profile-section {
-      padding: 40px 0;
-    }
-    
-    .profile {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 40px;
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
-    
-    .profile-photo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--primary);
-    }
-    
-    .profile-info h3 {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-    }
-    
-    .profile-info p {
-      font-size: 1rem;
-      color: rgba(255, 255, 255, 0.8);
-      max-width: 80%;
-    }
-    
-    /* Depoimentos */
-    .testimonials-section {
-      padding: 60px 0;
-    }
-    
-    .testimonial-carousel {
-      position: relative;
-      margin: 40px 0;
-    }
-    
-    .testimonial-wrapper {
-      position: relative;
-      overflow: hidden;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    
-    .testimonial-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 30px;
-      transition: opacity 0.5s ease;
-      position: relative;
-    }
-    
-    .testimonial-card.hidden {
-      display: none;
-    }
-    
-    .testimonial-content {
-      font-size: 1.2rem;
-      font-style: italic;
-      margin-bottom: 20px;
-      color: var(--light);
-      text-align: center;
-      min-height: 80px;
-    }
-    
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-    }
-    
-    .author-avatar {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--primary);
-    }
-    
-    .testimonial-dots {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 20px;
-    }
-    
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.3);
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    
-    .dot.active {
-      background-color: var(--primary);
-      transform: scale(1.2);
-    }
-    
-    .author-info {
-      text-align: left;
-    }
-    
-    .author-name {
-      font-weight: 600;
-      font-size: 1.1rem;
-    }
-    
-    .author-title {
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.7);
-    }
-    
-    .testimonial-controls {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
-    }
-    
-    .control-button {
-      background: rgba(58, 134, 255, 0.2);
-      color: var(--primary);
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-    }
-    
-    .control-button:hover {
-      background: rgba(58, 134, 255, 0.4);
-      transform: scale(1.1);
-    }
-    
-    /* Botão WhatsApp */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background-color: var(--accent);
-      color: white;
-      border-radius: 50px;
-      padding: 15px 25px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      z-index: 1000;
-      transition: all 0.3s ease;
-    }
-    
-    .whatsapp-float:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-    }
-    
-    /* Responsividade */
-    @media (max-width: 1024px) {
-      .steps {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-      
-      .hero-subtitle {
-        max-width: 100%;
-        margin: 0 auto 30px;
-      }
-      
-      .benefit-item {
-        justify-content: center;
-      }
-      
-      .stats {
-        flex-direction: column;
-      }
-      
-      .profile {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      .profile-info p {
-        max-width: 100%;
-      }
-    }
-    
-    @media (max-width: 576px) {
-      .steps {
-        grid-template-columns: 1fr;
-      }
-      
-      .hero-content h1 {
-        font-size: 2.3rem;
-      }
-      
-      .section-title {
-        font-size: 2rem;
-      }
-    }
-  </style>
+    <style>
+        :root {
+            /* Paleta de cores moderna */
+            --primary-blue: #1e3a8a;
+            --deep-blue: #1e293b;
+            --navy: #0f172a;
+            --slate: #334155;
+            --light-blue: #3b82f6;
+            --accent-blue: #60a5fa;
+            --success-green: #10b981;
+            --dark-bg: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --white: #ffffff;
+            --gray-100: #f8fafc;
+            --gray-300: #cbd5e1;
+            --gray-600: #475569;
+            --gray-800: #1e293b;
+            --border-color: rgba(59, 130, 246, 0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Header moderno */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
+        
+        .nav-menu a {
+            color: var(--gray-300);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--white);
+        }
+        
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--light-blue);
+            transition: var(--transition);
+        }
+        
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--navy) 50%, var(--deep-blue) 100%);
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070') center/cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 120px 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, var(--white) 0%, var(--accent-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-subtitle {
+            font-size: 20px;
+            color: var(--gray-300);
+            margin-bottom: 32px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin: 40px 0;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--light-blue);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 40px;
+        }
+        
+        .hero-visual {
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 500px;
+            width: 300px;
+            z-index: 1;
+        }
+        
+        .geometric-shape {
+            position: absolute;
+            border: 2px solid var(--light-blue);
+            border-radius: 12px;
+            background: rgba(59, 130, 246, 0.05);
+            backdrop-filter: blur(10px);
+        }
+        
+        .shape-1 {
+            width: 200px;
+            height: 200px;
+            top: 0;
+            right: 0;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .shape-2 {
+            width: 150px;
+            height: 150px;
+            bottom: 50px;
+            left: 0;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+        
+        .shape-3 {
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.1); }
+        }
+        
+        /* Botões */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--light-blue), var(--accent-blue));
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--light-blue);
+            border: 1px solid var(--light-blue);
+        }
+        
+        .btn-outline:hover {
+            background: var(--light-blue);
+            color: var(--white);
+        }
+        
+        /* Bancos e Instituições Parceiras */
+        .banks-section {
+            margin-top: 60px;
+        }
+        
+        .banks-title {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: var(--gray-300);
+            font-weight: 500;
+        }
+        
+        .banks-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            gap: 8px;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .bank-item {
+            height: 45px;
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(59, 130, 246, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 4px;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+        
+        .bank-item:hover {
+            background: rgba(59, 130, 246, 0.1);
+            border-color: var(--light-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15);
+        }
+        
+        .bank-logo {
+            max-height: 28px;
+            max-width: 100%;
+            object-fit: contain;
+            filter: brightness(0.9);
+            transition: var(--transition);
+        }
+        
+        .bank-item:hover .bank-logo {
+            filter: brightness(1);
+        }
+        
+        /* Seção de Serviços */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            height: auto;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--light-blue), var(--accent-blue));
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+        
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--light-blue);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--light-blue), var(--accent-blue));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: var(--white);
+        }
+        
+        .service-card h3 {
+            font-size: 22px;
+            margin-bottom: 16px;
+            color: var(--white);
+            line-height: 1.3;
+        }
+        
+        .service-card p {
+            color: var(--gray-300);
+            line-height: 1.6;
+            margin-bottom: 24px;
+            font-size: 16px;
+        }
+        
+        .service-benefits {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex: 1;
+        }
+        
+        .service-benefits li {
+            color: var(--gray-300);
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .service-benefits li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--light-blue);
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .service-benefits li:hover {
+            color: var(--white);
+        }
+        
+        /* Seções */
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-alt {
+            background: var(--card-bg);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .section-subtitle {
+            color: var(--light-blue);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 24px;
+            color: var(--white);
+        }
+        
+        .section-description {
+            font-size: 18px;
+            color: var(--gray-300);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Cards - ESTRUTURA CORRETA DO CLB */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+        
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--light-blue), var(--accent-blue));
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+        
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--light-blue);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--light-blue), var(--accent-blue));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: var(--white);
+        }
+        
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: var(--white);
+        }
+        
+        .card p {
+            color: var(--gray-300);
+            line-height: 1.6;
+        }
+        
+        /* Como Funciona */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+        
+        .process-step {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-8px);
+            border-color: var(--light-blue);
+        }
+        
+        .step-number {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--light-blue), var(--accent-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            margin: 0 auto 24px;
+        }
+        
+        .process-step h3 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: var(--white);
+        }
+        
+        .process-step p {
+            color: var(--gray-300);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        /* Depoimentos */
+        .testimonial-carousel {
+            position: relative;
+            margin: 40px 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            position: relative;
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        .testimonial-card.active {
+            display: block;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 16px;
+            left: 24px;
+            font-size: 48px;
+            color: var(--light-blue);
+            opacity: 0.3;
+        }
+        
+        .testimonial-content {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 32px;
+            color: var(--gray-300);
+            text-align: center;
+            line-height: 1.7;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--light-blue), var(--accent-blue));
+            border: 2px solid var(--light-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: var(--transition);
+        }
+        
+        .author-avatar:hover {
+            transform: scale(1.05);
+        }
+        
+        .author-info {
+            text-align: left;
+        }
+        
+        .author-name {
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--white);
+            margin-bottom: 4px;
+        }
+        
+        .author-title {
+            font-size: 14px;
+            color: var(--gray-600);
+        }
+        
+        .testimonial-controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .control-button {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--light-blue);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .control-button:hover {
+            background: var(--light-blue);
+            color: var(--white);
+            border-color: var(--light-blue);
+        }
+        
+        .testimonial-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 20px;
+        }
+        
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(59, 130, 246, 0.3);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .dot.active {
+            background-color: var(--light-blue);
+            transform: scale(1.2);
+        }
+        
+        /* Card Resultados Comprovados */
+        .results-proven-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 60px;
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .results-proven-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--light-blue), var(--accent-blue));
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+        
+        .results-proven-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .results-proven-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--light-blue);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+        
+        .results-icon-container {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--light-blue), var(--accent-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .results-content-wrapper {
+            flex: 1;
+        }
+        
+        .results-proven-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+        
+        .results-proven-description {
+            font-size: 16px;
+            color: var(--gray-300);
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .results-comparison-chart {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+        
+        .chart-period {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+        
+        .chart-bars-group {
+            display: flex;
+            align-items: flex-end;
+            height: 120px;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .chart-bar {
+            width: 30px;
+            border-radius: 6px 6px 0 0;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 5px;
+        }
+        
+        .chart-bar.no-advice {
+            background-color: rgba(96, 165, 250, 0.3);
+            height: 40px;
+        }
+        
+        .chart-bar.with-advice {
+            background-color: var(--light-blue);
+        }
+        
+        .chart-bar.advice-1 {
+            height: 63px;
+        }
+        
+        .chart-bar.advice-2 {
+            height: 80px;
+        }
+        
+        .chart-bar.advice-3 {
+            height: 120px;
+        }
+        
+        .bar-value {
+            position: absolute;
+            top: -22px;
+            font-size: 12px;
+            color: var(--white);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        .period-label {
+            font-size: 13px;
+            color: var(--gray-300);
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .chart-legend-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .legend-item-result {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--gray-300);
+        }
+        
+        .legend-color-result {
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
+        }
+        
+        .no-advice-legend {
+            background-color: rgba(96, 165, 250, 0.3);
+        }
+        
+        .with-advice-legend {
+            background-color: var(--light-blue);
+        }
+        
+        /* Formulário */
+        .form-container {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: var(--gray-300);
+            font-weight: 500;
+        }
+        
+        .input-group input {
+            width: 100%;
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--white);
+            font-size: 16px;
+            transition: var(--transition);
+        }
+        
+        .input-group select {
+            width: 100%;
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--white);
+            font-size: 16px;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .input-group input:focus,
+        .input-group select:focus {
+            outline: none;
+            border-color: var(--light-blue);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .input-group input::placeholder {
+            color: var(--gray-600);
+        }
+        
+        .input-group select option {
+            background: var(--card-bg);
+            color: var(--white);
+            padding: 10px;
+        }
+        
+        .privacy-text {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 16px;
+            color: var(--gray-600);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--navy);
+            border-top: 1px solid var(--border-color);
+            padding: 60px 0 32px;
+        }
+        
+        .footer-content {
+            text-align: center;
+        }
+        
+        .footer-content p {
+            color: var(--gray-300);
+            margin-bottom: 24px;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 32px;
+            text-align: center;
+            color: var(--gray-600);
+            font-size: 14px;
+        }
+        
+        /* Botão WhatsApp Flutuante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50px;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .whatsapp-float:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+        
+        /* Animações */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 100px 0;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 24px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .hero-visual {
+                display: none;
+            }
+            
+            .banks-section {
+                margin-top: 40px;
+            }
+            
+            .banks-title {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+            
+            .banks-list {
+                gap: 8px;
+                padding: 0 5px;
+                justify-content: flex-start;
+            }
+            
+            .bank-item {
+                height: 40px;
+                width: 55px;
+                min-width: 55px;
+            }
+            
+            .bank-logo {
+                max-height: 24px;
+            }
+            
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .service-card {
+                min-height: auto;
+                padding: 24px;
+            }
+            
+            .process-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            /* Responsividade do Card Resultados Comprovados */
+            .results-proven-card {
+                flex-direction: column;
+                gap: 20px;
+                padding: 30px 20px;
+            }
+            
+            .results-icon-container {
+                align-self: center;
+                width: 70px;
+                height: 70px;
+            }
+            
+            .results-comparison-chart {
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+            }
+            
+            .chart-period {
+                width: 100%;
+                max-width: 200px;
+            }
+            
+            .chart-bars-group {
+                height: 80px;
+                gap: 12px;
+                justify-content: center;
+            }
+            
+            .chart-bar.advice-1 {
+                height: 42px;
+            }
+            
+            .chart-bar.advice-2 {
+                height: 53px;
+            }
+            
+            .chart-bar.advice-3 {
+                height: 80px;
+            }
+            
+            .chart-legend-container {
+                flex-direction: column;
+                gap: 12px;
+                align-items: center;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .hero-visual {
+                right: 2%;
+                width: 250px;
+            }
+            
+            .hero-stats {
+                gap: 40px;
+            }
+            
+            .banks-list {
+                gap: 10px;
+            }
+            
+            .bank-item {
+                height: 45px;
+                width: 65px;
+            }
+            
+            .bank-logo {
+                max-height: 28px;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 28px;
+            }
+            
+            .service-card {
+                min-height: 380px;
+            }
+            
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            /* Responsividade do Card Resultados Comprovados para tablets */
+            .results-proven-card {
+                padding: 35px;
+            }
+            
+            .results-comparison-chart {
+                gap: 20px;
+            }
+            
+            .chart-bars-group {
+                height: 100px;
+            }
+            
+            .chart-bar.advice-1 {
+                height: 53px;
+            }
+            
+            .chart-bar.advice-2 {
+                height: 67px;
+            }
+            
+            .chart-bar.advice-3 {
+                height: 100px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="page-wrapper">
-    <div class="container">
-      <header style="display: flex; justify-content: space-between; align-items: center; padding: 1px 0;">
-        <img src="logo.png" alt="GMS Consultoria" style="height: 200px; width: auto;" />
-      </header>
-      
-      <!-- Seção Hero -->
-      <section class="hero">
-        <div class="hero-content">
-          <h1>Planejamento financeiro que transforma <span>jovens investidores em pessoas financeiramente livres</span></h1>
-          <p class="hero-subtitle">Transforme seu dinheiro em liberdade financeira com um plano personalizado para seus objetivos de vida.</p>
-          
-          <div class="benefits">
-            <div class="benefit-item">
-              <span class="benefit-icon">✓</span>
-              <span>Organize seu patrimônio de forma inteligente</span>
-            </div>
-            <div class="benefit-item">
-              <span class="benefit-icon">✓</span>
-              <span>Alinhe seus investimentos com seus objetivos reais</span>
-            </div>
-            <div class="benefit-item">
-              <span class="benefit-icon">✓</span>
-              <span>Maximize retornos com estratégias personalizadas</span>
-            </div>
-            <div class="benefit-item">
-              <span class="benefit-icon">✓</span>
-              <span>Construa riqueza consistente a longo prazo</span>
-            </div>
-          </div>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#" class="logo">
+                    <img src="logo.png" alt="GMS Consultoria">
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#como-funciona">Como Funciona</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-        
-        <div class="form-container">
-          <h2 class="form-title">Transforme suas finanças hoje</h2>
-          <form id="consultaForm" action="https://formspree.io/f/xanekrqr" method="POST">
-            <div class="input-group">
-              <label for="nome">Nome</label>
-              <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
-            </div>
-            
-            <div class="input-group">
-              <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-            </div>
-            
-            <button type="submit" class="cta-button">
-              Agendar conversa gratuita
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14"></path>
-                <path d="M12 5l7 7-7 7"></path>
-              </svg>
-            </button>
-            
-            <p class="privacy-text">Seus dados estão seguros. Não fazemos spam.</p>
-          </form>
-        </div>
-      </section>
+    </header>
 
-      <!-- Perfil -->
-      <section class="profile-section">
-        <div class="profile">
-          <img src="foto.jpg" alt="Gabriel Marques" class="profile-photo">
-          <div class="profile-info">
-            <h3>Gabriel Marques</h3>
-            <p>Planejador financeiro para investidores, com foco em estratégias personalizadas para metas de vida. Mais de R$ 2 milhões sob custódia e em crescimento.</p>
-          </div>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Planejamento financeiro que transforma investidores em pessoas financeiramente livres</h1>
+                <p class="hero-subtitle">
+                    Transforme seu dinheiro em liberdade financeira com um plano personalizado para seus objetivos de vida.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">Clientes</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">94%</span>
+                        <span class="stat-label">Satisfação</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">R$2M+</span>
+                        <span class="stat-label">Sob Custódia</span>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="https://wa.me/5511987756174?text=Olá,%20%0AGostaria%20de%20agendar%20uma%20conversa%20gratuita%20sobre%20planejamento%20financeiro.%0APoderia%20me%20ajudar?" target="_blank" class="btn btn-primary">
+                        Começar Agora
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#sobre" class="btn btn-outline">Saiba Mais</a>
+                </div>
+                
+                <!-- Bancos e Instituições Parceiras -->
+                <div class="banks-section">
+                    <h3 class="banks-title">Controle financeiro conectado com os principais bancos</h3>
+                    <div class="banks-list">
+                        <div class="bank-item">
+                            <img src="Bank=Avenue.jpg" alt="Avenue" class="bank-logo">
+                        </div>
+                        <div class="bank-item">
+                            <img src="Bank=Banco do Brasil.jpg" alt="Banco do Brasil" class="bank-logo">
+                        </div>
+                        <div class="bank-item">
+                            <img src="Bank=Bradesco.jpg" alt="Bradesco" class="bank-logo">
+                        </div>
+                        <div class="bank-item">
+                            <img src="Bank=BTG Pactual.jpg" alt="BTG Pactual" class="bank-logo">
+                        </div>
+                        <div class="bank-item">
+                            <img src="Bank=Citibank.jpg" alt="Citibank" class="bank-logo">
+                        </div>
+                        <div class="bank-item">
+                            <img src="Bank=Inter.jpg" alt="Inter" class="bank-logo">
+                        </div>
+                        <div class="bank-item">
+                            <img src="Bank=Itau.jpg" alt="Itaú" class="bank-logo">
+                        </div>
+                        <div class="bank-item">
+                            <img src="Bank=Next.jpg" alt="Next" class="bank-logo">
+                        </div>
+                        <div class="bank-item">
+                            <img src="Bank=Nubank.jpg" alt="Nubank" class="bank-logo">
+                        </div>
+                        <div class="bank-item">
+                            <img src="Bank=Rico.jpg" alt="Rico" class="bank-logo">
+                        </div>
+                        <div class="bank-item">
+                            <img src="Bank=Safra.jpg" alt="Safra" class="bank-logo">
+                        </div>
+                        <div class="bank-item">
+                            <img src="Bank=Santander.jpg" alt="Santander" class="bank-logo">
+                        </div>
+                        <div class="bank-item">
+                            <img src="Bank=XP Investimentos.jpg" alt="XP Investimentos" class="bank-logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="geometric-shape shape-1"></div>
+                <div class="geometric-shape shape-2"></div>
+                <div class="geometric-shape shape-3"></div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <!-- Estatísticas -->
-      <section class="stats-section">
-        <div class="stats">
-          <div class="stat-item">
-            <div class="stat-value">100+</div>
-            <div class="stat-label">Clientes Satisfeitos</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value">94%</div>
-            <div class="stat-label">Taxa de Satisfação</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value">R$2M+</div>
-            <div class="stat-label">Sob Custódia</div>
-          </div>
+    <!-- Sobre -->
+    <section id="sobre" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-subtitle">Quem Somos</div>
+                <h2 class="section-title">Excelência em Planejamento Financeiro</h2>
+                <p class="section-description">
+                    Somos especialistas em soluções financeiras completas, oferecendo desde organização patrimonial até estratégias de investimento personalizadas para pessoas que buscam liberdade financeira.
+                </p>
+            </div>
+            
+            <div class="cards-grid">
+                <div class="card fade-in">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3>Experiência Comprovada</h3>
+                    <p>Planejador financeiro especializado com foco em estratégias personalizadas para metas de vida. Mais de R$ 2 milhões sob custódia e em crescimento.</p>
+                </div>
+                
+                <div class="card fade-in">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4"/>
+                            <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/>
+                        </svg>
+                    </div>
+                    <h3>Estratégias Personalizadas</h3>
+                    <p>Cada cliente é único. Criamos planos de investimento sob medida alinhados com seus objetivos específicos e perfil de risco.</p>
+                </div>
+                
+                <div class="card fade-in">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Acompanhamento Contínuo</h3>
+                    <p>Monitoramento constante da sua carteira com ajustes estratégicos para maximizar resultados e manter o alinhamento com seus objetivos.</p>
+                </div>
+            </div>
         </div>
-      </section>
-      
-      <!-- Como Funciona -->
-      <section class="how-it-works">
-        <h2 class="section-title">Como Funciona</h2>
-        <div class="steps">
-          <div class="step">
-            <div class="step-number">1</div>
-            <h3 class="step-title">Diagnóstico</h3>
-            <p class="step-desc">Entendemos sua situação atual, objetivos e perfil de investidor para criar uma estratégia personalizada.</p>
-          </div>
-          
-          <div class="step">
-            <div class="step-number">2</div>
-            <h3 class="step-title">Planejamento</h3>
-            <p class="step-desc">Criamos um plano detalhado com estratégias de investimento alinhadas com seus objetivos de vida.</p>
-          </div>
-          
-          <div class="step">
-            <div class="step-number">3</div>
-            <h3 class="step-title">Implementação</h3>
-            <p class="step-desc">Colocamos seu plano em ação com acompanhamento constante para maximizar resultados.</p>
-          </div>
-          
-          <div class="step">
-            <div class="step-number">4</div>
-            <h3 class="step-title">Monitoramento</h3>
-            <p class="step-desc">Avaliações periódicas garantem que sua estratégia continue alinhada com seus objetivos em evolução.</p>
-          </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="section section-alt">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-subtitle">Nossos Serviços</div>
+                <h2 class="section-title">Soluções Financeiras Completas</h2>
+                <p class="section-description">
+                    Oferecemos um portfólio completo de serviços financeiros personalizados para transformar seus objetivos em realidade.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Serviço 1: Planejamento Financeiro -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
+                    </div>
+                    <h3>Planejamento Financeiro</h3>
+                    <p>Avaliação completa da sua situação atual, identificando pontos fortes e áreas de melhoria para construir seu futuro financeiro.</p>
+                    <ul class="service-benefits">
+                        <li>Análise detalhada do patrimônio atual</li>
+                        <li>Identificação de padrões de consumo</li>
+                        <li>Mapeamento de objetivos de curto, médio e longo prazo</li>
+                        <li>Avaliação do perfil de investidor</li>
+                    </ul>
+                </div>
+                
+                <!-- Serviço 2: Montagem da carteira de investimentos -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 20v-6M6 20V10M18 20V4"></path>
+                        </svg>
+                    </div>
+                    <h3>Montagem da Carteira de Investimentos</h3>
+                    <p>Desenvolvimento de uma carteira personalizada e alinhada com seus objetivos de vida e perfil de risco.</p>
+                    <ul class="service-benefits">
+                        <li>Organização de reservas de emergência</li>
+                        <li>Planejamento financeiro de longo prazo</li>
+                        <li>Investimentos personalizados para objetivos específicos</li>
+                        <li>Produtos alinhados com suas necessidades</li>
+                    </ul>
+                </div>
+                
+                <!-- Serviço 3: Seguros -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3>Seguros</h3>
+                    <p>Proteção financeira completa para você, sua família e o que mais importa em sua vida.</p>
+                    <ul class="service-benefits">
+                        <li>Protege a renda e o patrimônio familiar</li>
+                        <li>Garante amparo em momentos difíceis</li>
+                        <li>Facilita a sucessão patrimonial sem burocracia</li>
+                        <li>Preserva o patrimônio para os herdeiros</li>
+                    </ul>
+                </div>
+                
+                <!-- Serviço 4: Holding -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
+                    <h3>Holding</h3>
+                    <p>A holding imobiliária protege, organiza e otimiza o patrimônio da família de forma estratégica.</p>
+                    <ul class="service-benefits">
+                        <li>Redução de impostos em alguns casos</li>
+                        <li>Organização da gestão dos imóveis</li>
+                        <li>Proteção patrimonial contra riscos jurídicos</li>
+                        <li>Preserva o patrimônio para os herdeiros</li>
+                    </ul>
+                </div>
+                
+                <!-- Serviço 5: Previdência -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                    </div>
+                    <h3>Previdência</h3>
+                    <p>A previdência garante renda no futuro e é aliada fundamental no planejamento sucessório.</p>
+                    <ul class="service-benefits">
+                        <li>Renda complementar na aposentadoria</li>
+                        <li>Organização financeira para o futuro</li>
+                        <li>Flexibilidade para aportes e resgates</li>
+                        <li>Benefícios fiscais no longo prazo</li>
+                    </ul>
+                </div>
+                
+                <!-- Serviço 6: Quitação de Dívidas -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3>Quitação de Dívidas da Forma Mais Barata</h3>
+                    <p>Na GMS nós ajudamos você a sair das dívidas e se planejar financeiramente.</p>
+                    <ul class="service-benefits">
+                        <li>Consolidação de dívidas em condições vantajosas</li>
+                        <li>Estratégias personalizadas de quitação</li>
+                        <li>Planejamento para evitar novos endividamentos</li>
+                        <li>Educação financeira para controle permanente</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </section>
-      
-      <!-- Depoimentos -->
-      <section class="testimonials-section">
-        <h2 class="section-title">O Que Dizem Nossos Clientes</h2>
+    </section>
+
+    <!-- Como Funciona -->
+    <section id="como-funciona" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-subtitle">Nossa Metodologia</div>
+                <h2 class="section-title">Como Funciona</h2>
+                <p class="section-description">
+                    Processo estruturado e personalizado para transformar sua situação financeira em liberdade e prosperidade.
+                </p>
+            </div>
+            
+            <div class="process-grid">
+                <div class="process-step fade-in">
+                    <div class="step-number">1</div>
+                    <h3>Diagnóstico</h3>
+                    <p>Entendemos sua situação atual, objetivos e perfil de investidor para criar uma estratégia personalizada.</p>
+                </div>
+                
+                <div class="process-step fade-in">
+                    <div class="step-number">2</div>
+                    <h3>Planejamento</h3>
+                    <p>Criamos um plano detalhado com estratégias de investimento alinhadas com seus objetivos de vida.</p>
+                </div>
+                
+                <div class="process-step fade-in">
+                    <div class="step-number">3</div>
+                    <h3>Implementação</h3>
+                    <p>Colocamos seu plano em ação com acompanhamento constante para maximizar resultados.</p>
+                </div>
+                
+                <div class="process-step fade-in">
+                    <div class="step-number">4</div>
+                    <h3>Monitoramento</h3>
+                    <p>Avaliações periódicas garantem que sua estratégia continue alinhada com seus objetivos em evolução.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="section section-alt">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-subtitle">Casos de Sucesso</div>
+                <h2 class="section-title">O Que Dizem Nossos Clientes</h2>
+            </div>
+            
+            <!-- Card Resultados Comprovados -->
+            <div class="results-proven-card fade-in">
+                <div class="results-icon-container">
+                    <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <div class="results-content-wrapper">
+                    <h3 class="results-proven-title">Resultados Comprovados</h3>
+                    <p class="results-proven-description">Segundo estudo do Royal Bank of Canada, investidores com consultor tiveram patrimônio 4x maior após 15 anos.</p>
+                    
+                    <!-- Gráfico de comparação -->
+                    <div class="results-comparison-chart">
+                        <div class="chart-period">
+                            <div class="chart-bars-group">
+                                <div class="chart-bar no-advice">
+                                    <div class="bar-value">1x</div>
+                                </div>
+                                <div class="chart-bar with-advice advice-1">
+                                    <div class="bar-value">1.58x</div>
+                                </div>
+                            </div>
+                            <div class="period-label">4-6 anos</div>
+                        </div>
+                        
+                        <div class="chart-period">
+                            <div class="chart-bars-group">
+                                <div class="chart-bar no-advice">
+                                    <div class="bar-value">1x</div>
+                                </div>
+                                <div class="chart-bar with-advice advice-2">
+                                    <div class="bar-value">1.99x</div>
+                                </div>
+                            </div>
+                            <div class="period-label">7-14 anos</div>
+                        </div>
+                        
+                        <div class="chart-period">
+                            <div class="chart-bars-group">
+                                <div class="chart-bar no-advice">
+                                    <div class="bar-value">1x</div>
+                                </div>
+                                <div class="chart-bar with-advice advice-3">
+                                    <div class="bar-value">3.90x</div>
+                                </div>
+                            </div>
+                            <div class="period-label">15+ anos</div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-legend-container">
+                        <div class="legend-item-result">
+                            <div class="legend-color-result no-advice-legend"></div>
+                            <span>Sem consultoria</span>
+                        </div>
+                        <div class="legend-item-result">
+                            <div class="legend-color-result with-advice-legend"></div>
+                            <span>Com consultoria RBC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-carousel">
+                <!-- Ermelinda -->
+                <div class="testimonial-card active" id="testimonial-0">
+                    <p class="testimonial-content">"Depois que comecei o planejamento com o Gabriel, vivo minha aposentadoria com segurança e tranquilidade. Finalmente durmo em paz!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="author-info">
+                            <div class="author-name">Ermelinda Garcia</div>
+                            <div class="author-title">Aposentada, 84 anos</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Yuri -->
+                <div class="testimonial-card" id="testimonial-1">
+                    <p class="testimonial-content">"Em apenas 6 meses, consegui organizar minhas finanças e dar o primeiro passo para realizar meu sonho de trocar de apartamento."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <div class="author-info">
+                            <div class="author-name">Yuri Braga</div>
+                            <div class="author-title">Empresário, 29 anos</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Atila -->
+                <div class="testimonial-card" id="testimonial-2">
+                    <p class="testimonial-content">"Finalmente entendi como balancear meus investimentos e agora consigo dormir tranquilo sabendo que meu dinheiro está trabalhando para mim."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                                <path d="M7 8h10"></path>
+                                <path d="M7 12h10"></path>
+                            </svg>
+                        </div>
+                        <div class="author-info">
+                            <div class="author-name">Atila Patrick</div>
+                            <div class="author-title">Contador, 28 anos</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pedro -->
+                <div class="testimonial-card" id="testimonial-3">
+                    <p class="testimonial-content">"O planejamento mudou completamente minha relação com o dinheiro. Agora tenho uma estratégia clara e estou vendo resultados reais mês após mês."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <polyline points="7.5,4.21 12,6.81 16.5,4.21"></polyline>
+                                <polyline points="7.5,19.79 7.5,14.6 3,12"></polyline>
+                                <polyline points="21,12 16.5,14.6 16.5,19.79"></polyline>
+                                <polyline points="3.27,6.96 12,12.01 20.73,6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <div class="author-info">
+                            <div class="author-name">Pedro Heimann</div>
+                            <div class="author-title">Aeroportuário, 26 anos</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- João -->
+                <div class="testimonial-card" id="testimonial-4">
+                    <p class="testimonial-content">"Depois de trabalhar com o Gabriel, consegui reduzir minhas dívidas em 70% e comecei a investir mensalmente pela primeira vez na vida."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16,18 22,12 16,6"></polyline>
+                                <polyline points="8,6 2,12 8,18"></polyline>
+                            </svg>
+                        </div>
+                        <div class="author-info">
+                            <div class="author-name">João Victor</div>
+                            <div class="author-title">Desenvolvedor, 26 anos</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-controls">
+                    <button class="control-button prev-testimonial">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 12H5"></path>
+                            <path d="M12 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    <button class="control-button next-testimonial">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="testimonial-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                    <span class="dot" data-index="3"></span>
+                    <span class="dot" data-index="4"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-subtitle">Entre em Contato</div>
+                <h2 class="section-title">Transforme suas finanças hoje</h2>
+                <p class="section-description">
+                    Agende uma conversa gratuita e descubra como o planejamento financeiro pode transformar sua vida.
+                </p>
+            </div>
+            
+            <div style="max-width: 500px; margin: 0 auto;">
+                <div class="form-container">
+                    <form id="consultaForm" action="https://formspree.io/f/xanekrqr" method="POST">
+                        <div class="input-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" maxlength="15" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="objetivo">Como posso te ajudar?</label>
+                            <select id="objetivo" name="objetivo" required>
+                                <option value="">Selecione seu objetivo principal</option>
+                                <option value="organizar-financas">Organizar minhas finanças</option>
+                                <option value="investir-melhor">Investir melhor meu dinheiro</option>
+                                <option value="reserva-emergencia">Criar reserva de emergência</option>
+                                <option value="quitar-dividas">Quitar minhas dívidas</option>
+                                <option value="aposentadoria">Planejamento para aposentadoria</option>
+                                <option value="comprar-imovel">Comprar casa/apartamento</option>
+                                <option value="educacao-financeira">Educação financeira</option>
+                                <option value="protecao-patrimonial">Proteção do patrimônio</option>
+                                <option value="outro">Outro objetivo</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            Agendar conversa gratuita
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                        
+                        <p class="privacy-text">Seus dados estão seguros. Não fazemos spam.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3 style="color: var(--light-blue); margin-bottom: 16px;">GMS Consultoria</h3>
+                <p>Transformamos desafios financeiros em oportunidades de crescimento com planejamento personalizado para investidores.</p>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 GMS Consultoria. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5511987756174" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+        </svg>
+        <span>Fale comigo</span>
+    </a>
+
+    <script>
+        // Animação de scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(10, 10, 10, 0.98)';
+            } else {
+                header.style.background = 'rgba(10, 10, 10, 0.95)';
+            }
+        });
+
+        // Controle do carrossel de depoimentos
+        const testimonials = document.querySelectorAll('.testimonial-card');
+        const dots = document.querySelectorAll('.dot');
+        const prevButton = document.querySelector('.prev-testimonial');
+        const nextButton = document.querySelector('.next-testimonial');
         
-        <div class="testimonial-carousel">
-          <div class="testimonial-wrapper">
-            <!-- Ermelinda -->
-            <div class="testimonial-card" id="testimonial-0">
-              <p class="testimonial-content">"Depois que comecei o planejamento com o Gabriel, vivo minha aposentadoria com segurança e tranquilidade. Finalmente durmo em paz!."</p>
-              <div class="testimonial-author">
-                <img src="Ermelindafoto.png" alt="Ermelinda Garcia" class="author-avatar">
-                <div class="author-info">
-                  <div class="author-name">Ermelinda Garcia</div>
-                  <div class="author-title">Aposentada, 84 anos</div>
-                </div>
-              </div>
-            </div>
+        let currentIndex = 0;
+        
+        function showTestimonial(index) {
+            testimonials.forEach(testimonial => {
+                testimonial.classList.remove('active');
+            });
             
-            <!-- Yuri -->
-            <div class="testimonial-card hidden" id="testimonial-1">
-              <p class="testimonial-content">"Em apenas 6 meses, consegui organizar minhas finanças e dar o primeiro passo para realizar meu sonho de trocar de apartamento."</p>
-              <div class="testimonial-author">
-                <img src="Yurifoto.jpg" alt="Yuri Braga" class="author-avatar">
-                <div class="author-info">
-                  <div class="author-name">Yuri Braga</div>
-                  <div class="author-title">Empresário, 29 anos</div>
-                </div>
-              </div>
-            </div>
+            dots.forEach(dot => {
+                dot.classList.remove('active');
+            });
             
-            <!-- Atila -->
-            <div class="testimonial-card hidden" id="testimonial-2">
-              <p class="testimonial-content">"Finalmente entendi como balancear meus investimentos e agora consigo dormir tranquilo sabendo que meu dinheiro está trabalhando para mim."</p>
-              <div class="testimonial-author">
-                <img src="Atilafoto.png" alt="Atila Patrick" class="author-avatar">
-                <div class="author-info">
-                  <div class="author-name">Atila Patrick</div>
-                  <div class="author-title">Contador, 28 anos</div>
-                </div>
-              </div>
-            </div>
+            testimonials[index].classList.add('active');
+            dots[index].classList.add('active');
             
-            <!-- Pedro -->
-            <div class="testimonial-card hidden" id="testimonial-3">
-              <p class="testimonial-content">"O planejamento mudou completamente minha relação com o dinheiro. Agora tenho uma estratégia clara e estou vendo resultados reais mês após mês."</p>
-              <div class="testimonial-author">
-                <img src="Pedrofoto.png" alt="Pedro Heimann" class="author-avatar">
-                <div class="author-info">
-                  <div class="author-name">Pedro Heimann</div>
-                  <div class="author-title">Piloto de Avião, 26 anos</div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- João -->
-            <div class="testimonial-card hidden" id="testimonial-4">
-              <p class="testimonial-content">"Depois de trabalhar com o Gabriel, consegui reduzir minhas dívidas em 70% e comecei a investir mensalmente pela primeira vez na vida."</p>
-              <div class="testimonial-author">
-                <img src="Joãofoto.png" alt="João Victor" class="author-avatar">
-                <div class="author-info">
-                  <div class="author-name">João Victor</div>
-                  <div class="author-title">Desenvolvedor, 26 anos</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="testimonial-controls">
-            <button class="control-button prev-testimonial">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M19 12H5"></path>
-                <path d="M12 19l-7-7 7-7"></path>
-              </svg>
-            </button>
-            <button class="control-button next-testimonial">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14"></path>
-                <path d="M12 5l7 7-7 7"></path>
-              </svg>
-            </button>
-          </div>
-          
-          <!-- Indicadores de depoimentos -->
-          <div class="testimonial-dots">
-            <span class="dot active" data-index="0"></span>
-            <span class="dot" data-index="1"></span>
-            <span class="dot" data-index="2"></span>
-            <span class="dot" data-index="3"></span>
-            <span class="dot" data-index="4"></span>
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-  
-  <!-- Botão WhatsApp Flutuante -->
-  <a href="https://wa.me/5511987756174?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20planejamento.%20Pode%20me%20ajudar?" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-    </svg>
-    Fale comigo
-  </a>
-  
-  <script>
-    // Controle do carrossel de depoimentos
-    const testimonials = document.querySelectorAll('.testimonial-card');
-    const dots = document.querySelectorAll('.dot');
-    const prevButton = document.querySelector('.prev-testimonial');
-    const nextButton = document.querySelector('.next-testimonial');
-    
-    let currentIndex = 0;
-    
-    // Função para mostrar o depoimento atual
-    function showTestimonial(index) {
-      // Esconder todos os depoimentos
-      testimonials.forEach(testimonial => {
-        testimonial.classList.add('hidden');
-        testimonial.style.opacity = 0;
-      });
-      
-      // Remover classe ativa de todos os pontos
-      dots.forEach(dot => {
-        dot.classList.remove('active');
-      });
-      
-      // Mostrar o depoimento atual
-      const currentTestimonial = document.getElementById(`testimonial-${index}`);
-      currentTestimonial.classList.remove('hidden');
-      
-      // Fade in
-      setTimeout(() => {
-        currentTestimonial.style.opacity = 1;
-      }, 50);
-      
-      // Ativar o ponto correspondente
-      dots[index].classList.add('active');
-      
-      // Atualizar o índice atual
-      currentIndex = index;
-    }
-    
-    // Navegar para o depoimento anterior
-    prevButton.addEventListener('click', () => {
-      const newIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-      showTestimonial(newIndex);
-    });
-    
-    // Navegar para o próximo depoimento
-    nextButton.addEventListener('click', () => {
-      const newIndex = (currentIndex + 1) % testimonials.length;
-      showTestimonial(newIndex);
-    });
-    
-    // Adicionar event listeners aos pontos indicadores
-    dots.forEach(dot => {
-      dot.addEventListener('click', () => {
-        const index = parseInt(dot.getAttribute('data-index'));
-        showTestimonial(index);
-      });
-    });
-    
-    // Rotação automática
-    let autoRotate = setInterval(() => {
-      const newIndex = (currentIndex + 1) % testimonials.length;
-      showTestimonial(newIndex);
-    }, 8000);
-    
-    // Parar a rotação quando o mouse estiver sobre o carrossel
-    const carousel = document.querySelector('.testimonial-carousel');
-    carousel.addEventListener('mouseenter', () => {
-      clearInterval(autoRotate);
-    });
-    
-    // Reiniciar a rotação quando o mouse sair
-    carousel.addEventListener('mouseleave', () => {
-      autoRotate = setInterval(() => {
-        const newIndex = (currentIndex + 1) % testimonials.length;
-        showTestimonial(newIndex);
-      }, 8000);
-    });
-    
-    // Inicializar o carrossel
-    showTestimonial(0);
-    
-    // Efeitos de hover nos cards dos passos
-    const steps = document.querySelectorAll('.step');
-    steps.forEach(step => {
-      step.addEventListener('mouseenter', () => {
-        steps.forEach(s => {
-          if (s !== step) s.style.opacity = 0.7;
+            currentIndex = index;
+        }
+        
+        prevButton.addEventListener('click', () => {
+            const newIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+            showTestimonial(newIndex);
         });
-      });
-      
-      step.addEventListener('mouseleave', () => {
-        steps.forEach(s => {
-          s.style.opacity = 1;
+        
+        nextButton.addEventListener('click', () => {
+            const newIndex = (currentIndex + 1) % testimonials.length;
+            showTestimonial(newIndex);
         });
-      });
-    });
-  </script>
-    
-  </script>
+        
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const index = parseInt(dot.getAttribute('data-index'));
+                showTestimonial(index);
+            });
+        });
+        
+        // Rotação automática
+        let autoRotate = setInterval(() => {
+            const newIndex = (currentIndex + 1) % testimonials.length;
+            showTestimonial(newIndex);
+        }, 6000);
+        
+        // Parar rotação no hover
+        const carousel = document.querySelector('.testimonial-carousel');
+        carousel.addEventListener('mouseenter', () => {
+            clearInterval(autoRotate);
+        });
+        
+        carousel.addEventListener('mouseleave', () => {
+            autoRotate = setInterval(() => {
+                const newIndex = (currentIndex + 1) % testimonials.length;
+                showTestimonial(newIndex);
+            }, 6000);
+        });
+        
+        // Formatação automática do telefone
+        const phoneInput = document.getElementById('telefone');
+        
+        phoneInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, ''); // Remove tudo que não é dígito
+            
+            if (value.length > 0) {
+                if (value.length <= 2) {
+                    value = `(${value}`;
+                } else if (value.length <= 7) {
+                    value = `(${value.slice(0, 2)})${value.slice(2)}`;
+                } else {
+                    value = `(${value.slice(0, 2)})${value.slice(2, 7)}-${value.slice(7, 11)}`;
+                }
+            }
+            
+            e.target.value = value;
+        });
+        
+        // Permite apenas números, parênteses e hífen
+        phoneInput.addEventListener('keypress', function(e) {
+            const char = String.fromCharCode(e.which);
+            if (!/[0-9()]/.test(char) && e.which !== 8 && e.which !== 46) {
+                e.preventDefault();
+            }
+        });
+    </script>
 </body>
 </html>
