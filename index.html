@@ -59,6 +59,12 @@
             padding: 0 24px;
         }
         
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+        }
+        
         /* Header moderno */
         .header {
             position: fixed;
@@ -94,6 +100,82 @@
             display: flex;
             list-style: none;
             gap: 32px;
+        }
+        
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 24px;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+        
+        .mobile-menu-toggle:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 250px;
+            height: 100vh;
+            background: var(--navy);
+            transition: right 0.3s ease;
+            z-index: 1001;
+            padding-top: 80px;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .mobile-menu.active {
+            right: 0;
+        }
+        
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+        
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .mobile-menu li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .mobile-menu a {
+            display: block;
+            color: var(--white);
+            text-decoration: none;
+            padding: 20px 30px;
+            font-weight: 500;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+        
+        .mobile-menu a:hover {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--light-blue);
         }
         
         .nav-menu a {
@@ -1033,23 +1115,60 @@
         /* Responsividade */
         @media (max-width: 768px) {
             .hero-content {
-                padding: 100px 0;
+                padding: 80px 0 40px 0;
+                text-align: center;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.8rem;
+                line-height: 1.2;
+                margin-bottom: 15px;
+                padding: 0 5px;
+            }
+            
+            .hero-subtitle {
+                font-size: 14px;
+                margin-bottom: 20px;
+                padding: 0 15px;
+                line-height: 1.4;
             }
             
             .hero-stats {
-                flex-direction: column;
-                gap: 24px;
+                flex-direction: row;
+                justify-content: space-around;
+                gap: 10px;
+                margin: 20px 0;
+                padding: 0 15px;
+            }
+            
+            .stat {
+                flex: 1;
+                min-width: 70px;
+            }
+            
+            .stat-number {
+                font-size: 20px;
+                margin-bottom: 3px;
+            }
+            
+            .stat-label {
+                font-size: 10px;
+                line-height: 1.1;
             }
             
             .hero-buttons {
                 flex-direction: column;
                 align-items: center;
-                gap: 16px;
+                gap: 10px;
+                margin: 20px 0;
+                padding: 0 15px;
             }
             
             .hero-buttons .btn {
                 width: 100%;
-                max-width: 300px;
+                max-width: 250px;
+                padding: 12px 20px;
+                font-size: 14px;
             }
             
             .hero-visual {
@@ -1057,28 +1176,40 @@
             }
             
             .banks-section {
-                margin-top: 40px;
+                margin-top: 25px;
+                padding: 0 15px;
             }
             
             .banks-title {
-                font-size: 16px;
-                margin-bottom: 20px;
+                font-size: 13px;
+                margin-bottom: 15px;
+                line-height: 1.3;
+                text-align: center;
             }
             
             .banks-list {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: repeat(2, 1fr);
                 gap: 8px;
-                padding: 0 5px;
-                justify-content: flex-start;
+                max-width: 100%;
+                padding: 0;
+                margin: 0 auto;
+            }
+            
+            .bank-item:first-child {
+                display: none;
             }
             
             .bank-item {
-                height: 40px;
-                width: 55px;
-                min-width: 55px;
+                height: 32px;
+                width: 100%;
+                min-width: 45px;
+                flex-shrink: 0;
             }
             
             .bank-logo {
-                max-height: 24px;
+                max-height: 18px;
             }
             
             .cards-grid {
@@ -1105,52 +1236,97 @@
                 display: none;
             }
             
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .header .nav {
+                padding: 10px 0;
+            }
+            
+            .logo img {
+                height: 45px;
+            }
+            
             /* Responsividade do Card Resultados Comprovados */
             .results-proven-card {
                 flex-direction: column;
                 gap: 20px;
-                padding: 30px 20px;
+                padding: 25px 20px;
+                margin-bottom: 40px;
             }
             
             .results-icon-container {
                 align-self: center;
-                width: 70px;
-                height: 70px;
+                width: 60px;
+                height: 60px;
+            }
+            
+            .results-proven-title {
+                font-size: 20px;
+                text-align: center;
+            }
+            
+            .results-proven-description {
+                font-size: 14px;
+                text-align: center;
+                line-height: 1.5;
             }
             
             .results-comparison-chart {
                 flex-direction: column;
-                gap: 20px;
+                gap: 15px;
                 align-items: center;
             }
             
             .chart-period {
                 width: 100%;
-                max-width: 200px;
+                max-width: 150px;
             }
             
             .chart-bars-group {
-                height: 80px;
-                gap: 12px;
+                height: 60px;
+                gap: 8px;
                 justify-content: center;
             }
             
+            .chart-bar {
+                width: 25px;
+            }
+            
+            .chart-bar.no-advice {
+                height: 25px;
+            }
+            
             .chart-bar.advice-1 {
-                height: 42px;
+                height: 32px;
             }
             
             .chart-bar.advice-2 {
-                height: 53px;
+                height: 40px;
             }
             
             .chart-bar.advice-3 {
-                height: 80px;
+                height: 60px;
+            }
+            
+            .bar-value {
+                font-size: 10px;
+                top: -18px;
+            }
+            
+            .period-label {
+                font-size: 11px;
             }
             
             .chart-legend-container {
                 flex-direction: column;
-                gap: 12px;
+                gap: 8px;
                 align-items: center;
+            }
+            
+            .legend-item-result {
+                font-size: 12px;
             }
         }
         
@@ -1233,7 +1409,31 @@
                     <li><a href="#depoimentos">Depoimentos</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
+                
+                <!-- Menu hambúrguer para mobile -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
             </nav>
+        </div>
+        
+        <!-- Overlay do menu mobile -->
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+        
+        <!-- Menu mobile -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#como-funciona">Como Funciona</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
         </div>
     </header>
 
@@ -1929,6 +2129,44 @@
             const char = String.fromCharCode(e.which);
             if (!/[0-9()]/.test(char) && e.which !== 8 && e.which !== 46) {
                 e.preventDefault();
+            }
+        });
+        
+        // Menu hambúrguer mobile
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        
+        // Abrir/fechar menu
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            mobileMenuOverlay.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        // Fechar menu ao clicar no overlay
+        mobileMenuOverlay.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            mobileMenuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        
+        // Fechar menu ao clicar em um link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                mobileMenuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+        
+        // Fechar menu ao pressionar ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                mobileMenuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
             }
         });
     </script>
