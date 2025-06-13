@@ -65,12 +65,12 @@
             }
         }
         
-        /* Header moderno */
+        /* Header moderno com transparência aumentada */
         .header {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 10, 10, 0.95);
+            background: rgba(10, 10, 10, 0.4);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border-color);
             z-index: 1000;
@@ -79,21 +79,10 @@
         
         .nav {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             padding: 16px 0;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-        
-        .logo img {
-            height: 60px;
-            width: auto;
-            object-fit: contain;
+            position: relative;
         }
         
         .nav-menu {
@@ -112,6 +101,8 @@
             padding: 8px;
             border-radius: 4px;
             transition: var(--transition);
+            position: absolute;
+            right: 0;
         }
         
         .mobile-menu-toggle:hover {
@@ -255,6 +246,27 @@
             margin: 0 auto;
         }
         
+        .hero-logo {
+            position: absolute;
+            top: 70px;
+            left: -240px;
+            z-index: 3;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .hero-logo.fade-in-hero {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .hero-logo img {
+            height: 240px;
+            width: auto;
+            object-fit: contain;
+        }
+        
         .hero-content h1 {
             font-size: clamp(2.5rem, 5vw, 4rem);
             margin-bottom: 24px;
@@ -281,13 +293,23 @@
         
         .stat {
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         .stat-number {
             font-size: 32px;
             font-weight: 700;
             color: var(--light-blue);
-            display: block;
+            display: inline;
+        }
+        
+        .stat-plus, .stat-percent, .stat-prefix, .stat-suffix {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--light-blue);
+            display: inline;
         }
         
         .stat-label {
@@ -295,6 +317,7 @@
             color: var(--gray-600);
             text-transform: uppercase;
             letter-spacing: 1px;
+            margin-top: 8px;
         }
         
         .hero-buttons {
@@ -428,6 +451,14 @@
             padding: 4px;
             transition: var(--transition);
             flex-shrink: 0;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .bank-item.fade-in-bank {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
         
         .bank-item:hover {
@@ -1133,7 +1164,7 @@
         /* Responsividade */
         @media (max-width: 768px) {
             .hero-content {
-                padding: 80px 0 40px 0;
+                padding: 20px 0 40px 0;
                 text-align: center;
             }
             
@@ -1162,11 +1193,20 @@
             .stat {
                 flex: 1;
                 min-width: 70px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
             
             .stat-number {
                 font-size: 20px;
                 margin-bottom: 3px;
+                display: inline;
+            }
+            
+            .stat-plus, .stat-percent, .stat-prefix, .stat-suffix {
+                font-size: 20px;
+                display: inline;
             }
             
             .stat-label {
@@ -1224,6 +1264,13 @@
                 width: 100%;
                 min-width: 45px;
                 flex-shrink: 0;
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            
+            .bank-item.fade-in-bank {
+                opacity: 1;
+                transform: translateY(0);
             }
             
             .bank-logo {
@@ -1259,11 +1306,19 @@
             }
             
             .header .nav {
-                padding: 10px 0;
+                padding: 20px 0;
             }
             
-            .logo img {
-                height: 45px;
+            .hero-logo {
+                position: relative;
+                top: 0;
+                left: 0;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            
+            .hero-logo img {
+                height: 120px;
             }
             
             /* Responsividade do Card Resultados Comprovados */
@@ -1358,6 +1413,12 @@
                 gap: 40px;
             }
             
+            .stat {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
             .banks-list {
                 gap: 10px;
             }
@@ -1365,6 +1426,13 @@
             .bank-item {
                 height: 45px;
                 width: 65px;
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            
+            .bank-item.fade-in-bank {
+                opacity: 1;
+                transform: translateY(0);
             }
             
             .bank-logo {
@@ -1416,9 +1484,6 @@
     <header class="header">
         <div class="container">
             <nav class="nav">
-                <a href="#" class="logo">
-                    <img src="logo.png" alt="GMS Consultoria">
-                </a>
                 <ul class="nav-menu">
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#sobre">Sobre</a></li>
@@ -1465,6 +1530,11 @@
     <section id="inicio" class="hero">
         <div class="container">
             <div class="hero-content">
+                <!-- Logo na seção hero -->
+                <div class="hero-logo">
+                    <img src="logo.png" alt="GMS Consultoria">
+                </div>
+                
                 <h1>Planejamento financeiro que transforma investidores em pessoas financeiramente livres</h1>
                 <p class="hero-subtitle">
                     Transforme seu dinheiro em liberdade financeira com um plano personalizado para seus objetivos de vida.
@@ -1472,15 +1542,21 @@
                 
                 <div class="hero-stats">
                     <div class="stat">
-                        <span class="stat-number">30+</span>
+                        <div>
+                            <span class="stat-number" data-target="30">0</span><span class="stat-plus">+</span>
+                        </div>
                         <span class="stat-label">Clientes</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">94%</span>
+                        <div>
+                            <span class="stat-number" data-target="98">0</span><span class="stat-percent">%</span>
+                        </div>
                         <span class="stat-label">Satisfação</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">R$2M+</span>
+                        <div>
+                            <span class="stat-prefix">R$</span><span class="stat-number" data-target="2" data-type="decimal">0</span><span class="stat-suffix">M+</span>
+                        </div>
                         <span class="stat-label">Sob Custódia</span>
                     </div>
                 </div>
@@ -2064,9 +2140,9 @@
         window.addEventListener('scroll', () => {
             const header = document.querySelector('.header');
             if (window.scrollY > 100) {
-                header.style.background = 'rgba(10, 10, 10, 0.98)';
+                header.style.background = 'rgba(10, 10, 10, 0.6)';
             } else {
-                header.style.background = 'rgba(10, 10, 10, 0.95)';
+                header.style.background = 'rgba(10, 10, 10, 0.4)';
             }
         });
 
@@ -2194,6 +2270,124 @@
                 closeMobileMenu();
             }
         });
+        
+        // Animação de contagem dos números
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const type = element.getAttribute('data-type');
+            const duration = 2000; // 2 segundos
+            
+            if (type === 'decimal') {
+                // Para valores decimais (0.1M, 0.2M, etc.)
+                const increment = 0.1;
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    element.textContent = current.toFixed(1);
+                }, 100); // 100ms para cada incremento de 0.1
+            } else {
+                // Para valores inteiros normais
+                const start = 0;
+                const increment = target / (duration / 16); // 60fps
+                let current = start;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    element.textContent = Math.floor(current);
+                }, 16);
+            }
+        }
+        
+        // Observer para disparar a animação quando os stats ficarem visíveis
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number[data-target]');
+                    statNumbers.forEach(statNumber => {
+                        if (statNumber.textContent === '0') { // Só anima se ainda não foi animado
+                            animateCounter(statNumber);
+                        }
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        // Observar a seção de stats
+        const heroStats = document.querySelector('.hero-stats');
+        if (heroStats) {
+            statsObserver.observe(heroStats);
+        }
+        
+        // Animação sequencial dos logos dos bancos
+        function animateBanks() {
+            const bankItems = document.querySelectorAll('.bank-item');
+            bankItems.forEach((bank, index) => {
+                setTimeout(() => {
+                    bank.classList.add('fade-in-bank');
+                }, index * 150); // 150ms de delay entre cada logo
+            });
+        }
+        
+        // Observer para disparar a animação dos bancos quando ficarem visíveis
+        const banksObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateBanks();
+                    banksObserver.unobserve(entry.target); // Para de observar após animar
+                }
+            });
+        }, { threshold: 0.3 });
+        
+        // Observar a seção dos bancos
+        const banksSection = document.querySelector('.banks-section');
+        if (banksSection) {
+            banksObserver.observe(banksSection);
+        }
+        
+        // Animação sequencial do logo e título principal
+        function animateHeroElements() {
+            const heroLogo = document.querySelector('.hero-logo');
+            const heroTitle = document.querySelector('.hero-content h1');
+            
+            // Logo aparece primeiro
+            setTimeout(() => {
+                if (heroLogo) {
+                    heroLogo.classList.add('fade-in-hero');
+                }
+            }, 300);
+            
+            // Título aparece 500ms depois do logo
+            setTimeout(() => {
+                if (heroTitle) {
+                    heroTitle.classList.add('fade-in-hero');
+                }
+            }, 800);
+        }
+        
+        // Observer para disparar a animação dos elementos hero quando ficarem visíveis
+        const heroObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateHeroElements();
+                    heroObserver.unobserve(entry.target); // Para de observar após animar
+                }
+            });
+        }, { threshold: 0.2 });
+        
+        // Observar a seção hero
+        const heroSection = document.querySelector('.hero');
+        if (heroSection) {
+            heroObserver.observe(heroSection);
+        }
     </script>
 </body>
 </html>
